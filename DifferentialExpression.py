@@ -9,10 +9,8 @@ sys.path.append(tasklib_path + "/ccal")
 import ccal as ccal
 from modalities import differential_gene_expression
 import pandas as pd
-
 from ccal.mathematics.information import information_coefficient
-# print(information_coefficient)
-# print(os.listdir(tasklib_path + "/ccal/ccal/match"))
+
 from ccal.match.match.make_match_panel import make_match_panel
 # from match.make_match_panel import make_match_panel
 # from ccal.match.match.make_summary_match_panel import make_summary_match_panel
@@ -40,7 +38,10 @@ phenotypes.index = gene_expression.columns
 # title=None,
 # random_seed=RANDOM_SEED
 
+
+import cuzcatlan as cusca
+
 differential_gene_expression(phenotypes=phenotypes, gene_expression=gene_expression, output_filename='test',
-                             title="Test")
+                             title="Test", function=cusca.custom_pearson)
 
 
