@@ -1,0 +1,6 @@
+[submodule "tools/match"]
+	path = tools/match
+	url = https://github.com/KwatME/match.git
+[submodule "tools/file"]
+	path = tools/file
+	url = https://github.com/KwatME/file.git
