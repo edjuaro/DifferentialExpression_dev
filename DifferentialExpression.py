@@ -38,10 +38,11 @@ phenotypes.index = gene_expression.columns
 # title=None,
 # random_seed=RANDOM_SEED
 
-
 import cuzcatlan as cusca
 
-differential_gene_expression(phenotypes=phenotypes, gene_expression=gene_expression, output_filename='test',
-                             title="Test", function=cusca.custom_pearson)
+# differential_gene_expression(phenotypes=phenotypes, gene_expression=gene_expression, output_filename='test',
+#                              title="Test", function=cusca.custom_pearson, number_of_permutations=2)
 
+differential_gene_expression(phenotypes=phenotypes, gene_expression=gene_expression, output_filename='test',
+                             title="Test", number_of_permutations=2)
 
